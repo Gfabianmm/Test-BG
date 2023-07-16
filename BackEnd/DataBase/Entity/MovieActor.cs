@@ -8,7 +8,8 @@ namespace BackEnd.DataBase.Entity
     {
         public int MovieId { get; set; }
         public int ActorId { get; set; }
-        public DateTime CreateAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime ModifiedAt { get; set; }
         public bool Deleted { get; set; }
 
         [ForeignKey("ActorId")]

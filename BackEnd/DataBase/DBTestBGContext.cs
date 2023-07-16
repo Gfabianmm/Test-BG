@@ -33,7 +33,7 @@ namespace BackEnd.DataBase
         public DbSet<MovieActor> MovieActors { get; set; }
         public DbSet<MovieCategory> MovieCategories { get; set; }
         public DbSet<MovieGenre> MovieGenres { get; set; }
-        public DbSet<Users> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }
