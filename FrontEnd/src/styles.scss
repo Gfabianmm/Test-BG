@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+
+body{
+  background-image:url('./assets/img/005416 - copia.png');
+  background-position: center;
+}
+nav{
+  background-color: rgb(179 48 118 / 98%) !important;
+  a{
+     color: white !important;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+     font-size: large !important;
+
+  }
+  .btn.btn-link{
+    color: white;
+  }
+
+  .btn.btn-link:hover{
+    color: lightgrey;
+  }
+
+}
+
+.card-movie{
+
+  img{
+    height: 500px !important;
+    width: auto !important;
+  }
+}
