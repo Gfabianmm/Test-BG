@@ -29,31 +29,33 @@
 
 <div class="container">
 
-  <div *ngIf="!authService.isLoggedIn()">
+  <div *ngIf="!authService.isLoggedIn()" class="mt-4">
     <!-- <div class="alert alert-primary text-center" role="alert">
       Inicia sesión para mostrate tus preferencias
     </div> -->
     <div class="alert alert-primary" role="alert">
       <h4 class="alert-heading">¡Hola, cinéfilo/a!</h4>
-      <p>Regístrate o inicia sesión para desbloquear funciones exclusivas, como la capacidad de guardar tus películas favoritas y recibir recomendaciones basadas en tus preferencias.</p>
+      <p>Regístrate o inicia sesión para desbloquear funciones exclusivas, como la capacidad de guardar tus películas
+        favoritas y recibir recomendaciones basadas en tus preferencias.</p>
       <!-- <hr>
       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p> -->
     </div>
   </div>
-  <div class="card">
+</div>
+<div class="container-fluid">
+  <div *ngIf="authService.isLoggedIn()" class="card mt-5">
     <div class="card-header">
-      <h5 class="card-title">Terror</h5>
+      <h5 class="card-title">Recomendadas</h5>
     </div>
     <div class="card-body">
-
-
       <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner ">
           <div class="carousel-item active">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
               <div class="col">
                 <div class="card card-movie">
-                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
                   <div class="card-body">
                     <h5 class="card-title">Título de la película</h5>
                     <p class="card-text">Descripción de la película</p>
@@ -66,7 +68,8 @@
               </div>
               <div class="col">
                 <div class="card card-movie">
-                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
                   <div class="card-body">
                     <h5 class="card-title">Título de la película</h5>
                     <p class="card-text">Descripción de la película</p>
@@ -79,7 +82,36 @@
               </div>
               <div class="col">
                 <div class="card card-movie">
-                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
                   <div class="card-body">
                     <h5 class="card-title">Título de la película</h5>
                     <p class="card-text">Descripción de la película</p>
@@ -93,10 +125,11 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
               <div class="col">
                 <div class="card card-movie">
-                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
                   <div class="card-body">
                     <h5 class="card-title">Título de la película</h5>
                     <p class="card-text">Descripción de la película</p>
@@ -109,7 +142,8 @@
               </div>
               <div class="col">
                 <div class="card card-movie">
-                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
                   <div class="card-body">
                     <h5 class="card-title">Título de la película</h5>
                     <p class="card-text">Descripción de la película</p>
@@ -122,7 +156,37 @@
               </div>
               <div class="col">
                 <div class="card card-movie">
-                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
                   <div class="card-body">
                     <h5 class="card-title">Título de la película</h5>
                     <p class="card-text">Descripción de la película</p>
@@ -146,226 +210,285 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-  <div id="listado-peliculas">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-2">
-        <div class="card card-movie">
-          <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
-          <div class="card-body">
-            <h5 class="card-title">Título de la película</h5>
-            <p class="card-text">Descripción de la película</p>
-            <div class="d-flex justify-content-between">
-              <span class="badge bg-secondary">Género</span>
-              <span class="badge bg-secondary">Edad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Repetir la estructura de la tarjeta para cada película -->
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-2">
-        <div class="card card-movie">
-          <img src="https://i.pinimg.com/550x/3b/74/c4/3b74c4b65eb80afdd13146f6c68e26a9.jpg" class="card-img-top img-fluid" alt="Imagen de la película">
-          <div class="card-body">
-            <h5 class="card-title">Título de la película</h5>
-            <p class="card-text">Descripción de la película</p>
-            <div class="d-flex justify-content-between">
-              <span class="badge bg-secondary">Género</span>
-              <span class="badge bg-secondary">Edad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Repetir la estructura de la tarjeta para cada película -->
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-2">
-        <div class="card">
-          <img src="ruta-a-la-imagen.jpg" class="card-img-top" alt="Imagen de la película">
-          <div class="card-body">
-            <h5 class="card-title">Título de la película</h5>
-            <p class="card-text">Descripción de la película</p>
-            <div class="d-flex justify-content-between">
-              <span class="badge bg-secondary">Género</span>
-              <span class="badge bg-secondary">Edad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Repetir la estructura de la tarjeta para cada película -->
-
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-2">
-        <div class="card">
-          <img src="ruta-a-la-imagen.jpg" class="card-img-top" alt="Imagen de la película">
-          <div class="card-body">
-            <h5 class="card-title">Título de la película</h5>
-            <p class="card-text">Descripción de la película</p>
-            <div class="d-flex justify-content-between">
-              <span class="badge bg-secondary">Género</span>
-              <span class="badge bg-secondary">Edad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Repetir la estructura de la tarjeta para cada película -->
-
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-2">
-        <div class="card">
-          <img src="ruta-a-la-imagen.jpg" class="card-img-top" alt="Imagen de la película">
-          <div class="card-body">
-            <h5 class="card-title">Título de la película</h5>
-            <p class="card-text">Descripción de la película</p>
-            <div class="d-flex justify-content-between">
-              <span class="badge bg-secondary">Género</span>
-              <span class="badge bg-secondary">Edad</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Repetir la estructura de la tarjeta para cada película -->
-
     </div>
+  </div>
 
 
 
+  <!--terror-->
+  <div class="card mt-5">
+    <div class="card-header">
+      <h5 class="card-title">Terror</h5>
+    </div>
+    <div class="card-body">
+      <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner ">
+          <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    <div class="movies--grid">
-      <div>
-        <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" alt="image">
-        <h1>Pelicula 1</h1>
-        <h2>Resumen de la pelicula 1</h2>
-      </div>
-      <div>
-        <img
-          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGCBUVExcVFRUYGBcZGhodGhoaGRocGhsaGhofGRkaGBobHysjHx0oHxgZJDUkKCwuMjIyHCE3PDcxOysxMi4BCwsLDw4PHRERHTEoISgxMTE0NC4uMTExMS4zMTEzMzExMTExMTExMTExMTMxMTExMTExMTExMTExMTExMTkxMf/AABEIAOEA4AMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAFBgQHAAIDAQj/xABFEAACAQIEAwYEAwYFAQYHAAABAhEAAwQSITEFQVEGEyJhcYEykaGxB0LBFCNSctHwM2KC4fEVNFODorKzFiQlQ3OS0v/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwQABQb/xAArEQACAgEEAQQABwADAAAAAAAAAQIRAxIhMUEEEyJRYQUUMnGBkaFC0eH/2gAMAwEAAhEDEQA/AEfszwFbii5cGYMcqICV1zhC7sNQoJAhZJkbCjF/glnIoNu0CcgAVbg8TZ9C4fNHg3IO+1DeyfFlzLZckKC2UKVGfMxLCTs2ojWDljmKaMThkY50uMqfuyZbxxDlkAOzSFBJ2g7V5nk5cscjTtK9nvx0jZjhBxsrfjODW2/gJKkkQfiUrGZTyMSNRvNQGNE+P4sO5VTmVSYaBr1iAPDtqdTE0Lr1cduKszSq9jBXVFmtAtSsKh9qdiNnApW+Gw7uYRSx6ATpVhdncOl/9nXKqZ2ZWi2hkJOozDRiB5iuHErITi5toirbVcmUAQwNrOc/8RzNv5DpWH86nKUa3Sb/AKK+m1pb7oUP+kX1BLWbgAEklToOp6DUVGewRy0q0OPYQLw+ylpFXvLg7wroXy95q7c1GUaco0oNw/s2162xtgsyqSJAC3MvxLb5kgazzgihh86EoqT7dCzhJSaS4En9lNYMK3Snfg3DbcA94ouc5BIt6wPDGr6aToKN8c4Bbud/eA2jIEMytsLnJO0suo03nWhk/EIQnpZyxScdSK8Xhbm01wKci7n3A99WHzoXeTKYq3MFhkeyUEojXEVz4T4FykZSR4QCxPMzJnalz8QuDKl5WTL401AIMFfDOnUQfnS+P58cmTQ1TGnicI6mxEt71bPAeEJfwti4Ga2VADhdFdQp30JVsyEEjceetV1ZwXWrP7BtOFCdGiPXvD+tT/FssoYdUHTTD42mU9LF9OAW75vt4GZAslVdSC3wsJaNh0560lcQ4e1tirbj5EciKsvszcCYi/tBCAzsZBEfWgPau2O8iOb/ACkf1NJ4vkTWZ45bqk1/RTLjWjUtqbQh5KlcPwFy62VFkwSeQAHMn5D3o0OFHMudSgY6M4Kr13P97U28H4Vktlrds5MrHPmEXGHh1bbwgsQoJ18625/LjijZHHjc3RWn7O3TXy1qOaf+G8DFu/mzhwwPd7bZSbjH0AKjzPlSzjuD3e/Ze7YF3cqCIkZiZE8o50+PyYTbSfCTA4OKtghVmsijdzg9y0CWEjYlTIHkY2qZg+BjJmfwsYyqR6kZhvrBge9PLPjStsVRk3SQsG2ayi3H8H3TAbhgSDEbGCI5UJJqsJKcVJcHNNOmZWV5WyLPyJ+VMcbXVAZgNgSB6TUrE8UvOmVnYrtykgbBmHiYDzJrMPibQADWgx01LnUg67a61NvYZFVj3aQoY/4hmDJWZGpHT6aipTav3IKvpgGsqVi7yMIS3k1n4p5RAnlzqNVE7QDBXaw8VzU0d7HY63avg3FBVhEmPCTzE6D/AGHKknJxi2lddHJW6HH8Odf2c8xcf6iP1rjxtf8A6yw6ldP/AARR3sxYIIdrnenvgQwEEq2UKCBsQBEVBxWFtvju+e5kd2UKs/vPCgTQDRSQpMmT0HOvnFmXr5H8prvnk2yg3CH00TeMsVweGyAF1uE5cwBKhrgbc7a/WolriF04l7irkRcoRZEKYhgAp00LED0ovxN0NixpCviGUkaHKz3TE7xsa4cbwypctIoCqqOsDQTmUgnqTJ1NZseRKGlq71b/AMsOm53vyiLxrDouPxCgQGtW3P8AMdSR6kfU1x7T8ffDXHs2tCwXfUAMOQPMx9KmY9Q3FWjUGykHkSCZHQnype7fYctjUABJa2mm5+Jh+lafHUcmWKnv7L3+diM24Y3XyM9xBbwbMT+a2dtgxXrQbjnAzbS5duFmIy5TnDZs2zRlEKDp/c0V7QXQ+AuDXPlQlYggZxrG8DrUnA3O/wADbVVzOy5IOwYmcx8lysfes+HLkxJZF3Jp/sPOOuTX1sLbYe2uFe5ctrm8Nu3AAm4RLMTE+Eee5pl7MYTJasNbWEuqSXmcjhWBlehKmPSKUe2GJHeLYttmt2Vyz/FcOtxz76e1M/Z+7cXB2htlkj5O6z5ENWvz9X5ZOT5fH10T8enmqPSBwwC94wL+FiAznIqwpiW2bN0UeVTbOHS5euXVVLiqzAMWGUEAsBrtoFk79IpM7UXSL5hiAwBgExqTTP2DhsFdH+dz8rVLnxTx4fVvdpL+HVlYZlLJora2b5DiLFx3FsoGiANZ5gnbQjkPzeVSeBZU4fkB0U3R/wCZhNRux65rF1Z0725I9gf61LwSxgJj893/ANbGs+aW7x9KS/0pGmlLumQ+yN7vMExYA3EuZVJUSE7uAvprXnAEa6txnYk23cLttKeE6TGs1y7EOf2C8RuLn3QVK7HJms3x1uuP/TRzNxeVrppC4t4wv7MwGDNyzcVkHejNkI1zWx4hmOwMaa/w+ddMS5t27LDL40HeEQA8E79Z/pSZibV8pfu23cIjOGAJ+HSTvoPEBTT2gQf9OtEf9zr/APqK0ZcNSjbT1P8Ao7FlbtVwn/4Kvb/iNq5ltoM1xTNx1MoGiCqdT1O00oGK3dq5kV7+DEsUFFcIxSk5StnhNeita2WrAO+Hu5GJyq24hhI9xUhuI6g91a0n8vUk/SahuNT6n71rSyimwJm1+5mYtAG2g0AgRt7VyNega16Vo8HWYK6ha5Za3WaAGWT+GF0i3aWf/v8A08MD03+tRu1DEcd/1Wv/AGlrl2V4lh8MqA3Q7K4uD8ozdDOsf8+Vb8Uurf4kuJtMHRgpZQJa2UQJDRoZIEEHXXaK8PQ458smnTT5RrbUowS5X/Yd7Y3cnDbDTMYgn1hrtArvbBDd7xlOkkdAYKr4fIHeinbWW4RbVPE1q7muAalQzXPEY/L4l12qsHeabwfEx5MXu6b/ANYMmWcMjrYYh2mum41wBZJ0kDQfai3B717HOJIXup8Y+IAgnLOpjcxr5b0mYd4qRavlDKmP76GvQl40EvYknVJ10Znklfu3QexeJuA+FrpEallI30IGg5elMOAxpweDZyfG2ZLQ5Bm/xHA6DQT1nrS7gOOOupE+pP6zUPj/ABFrxBMAKoVVGiqo6D11rNLDKcowaWlO39hU4pNpu+P2PP2obk1YvZ/ELcwdliYyi5aPT82Ut58h/NVSRpTlwPiGXhOIg+JLqFfdSfuKH4hg9THFJ9pB8eeiV/TF3G3fG0n8x+9Eez/G2s+EMe7JllkwdMpkcwRp9oNLF68WJJOpJPzrkLnnW14IyjpluhIpp2ixk49Yw4c2SXz54Uz4e8jNJ0mIgGBAJ3nQpwDiVu7gcgab2ZyUA5liR882lVtduBwndpDZSX3iV3CCY2gnnJPKK4d5ctXDDFXXmp99CNwaxT/D4Tjy7tO39Flkkn9cbfZZ/wCH7KcNdRiFJugZToSco0E899KB4NMRbvM6Wy6M0lQVk9GXWQw5GlnD8au94bpc52MsxiG/mXY/Ki1ztY+ViEQXSP8AEUn55Tzqb8ScckpUmpVf0csq0qPFWZxHiQuTYU9yrv8AvCw265gPUzTJjb6XMKbSXEYBcqZdTGUAl/kNAPnVa37xJJJJ8+tcw3OtOTwlLTTqnfzuCGZxbbV2dcbgrluM6xOxkEGOhFRTXS7dJ3JPqSfvXMmt8brcma16Kw16tME2bc+teGvW3PrXhoMBJ4QiteRW2JI+akD6xW3FcE1q4Ub1B6g7VEQ60xXUOKw+Ya3LfLmRz9qDAL4bSvFNeGvVrjjdEJ2qThsbctzlYrO8HetMKrHQD2iQa2uYZxMofUDSg6ezFvc7HjF+CBdaCCp22bQjbYioIWplrBhp18huCZ8q73OC3V1y5h5b6b6UFojxsFz+QejE7V0TzqamEXklxddZViAPWKk3OFk28457R/fka5yQjkgalysd+tSrXDGDgGf96KHs7cKDMImZJ0gA0ras60gNbHyNdrmOKWbtqNLhQz0yT9wxqdgOBXLjlUSACdW6eSj9aKp2McmGlj8zowBgct6WWl8nakmImUnajWMuq6gI5tIUVTayMQCuXMQV0aWXNmPi1NOC9iHG8IPYtIMjyGleXOyFxCCuWDMsx1PzrpO2vo5ZekK+It2HNogZEttlYFJZ7YIYORlAzHxAg9Qa34nZtNbZlQIXAacgAVkgZLemisAzE9WUdaYsR2RuMMxExsZUD2Fe3cLct3LZZHYJnElQJQpkVTBgxAObTYD0zz1Rpxt89jxy6rTpChdNg2VRSodGVs5XVwZ7wEZZhTEAkyB7V24jdwrXUdCoQM7MgTKYzSikBcsQApO+p30o/iOG3LilUDp8QaFkvJ8Jc7yBA56AVIxWGRbi3GRyyENlCg6ZFtlZ5CVzGeZPvzm9nT7HU4va10I/G2ttcD2soV1UlF0yNADLoAIkTI60Pmmk4xkN3V4KHuzAOQ5kOZpMzCZRuYPzH3cfb7gW0BVrZVkYrqzHN3maJAHiEenvWiE3SVPoOz3sDVle3HLEk7noI+gryrCmVgrDWCmOOlz4j6n71vhbOdso3MxqBrGm/wDzWr7n1NT+HYcQrayxZdUlNjECIbbrp050s5UjoqwZEH0qfwnG91cDflOjelQiPER5mvDXACvaTAhH7xNbb6g+Z1+u9DUX0+Y/WmDs7dF+22Gc6wSnU+QPlvQXE4Vrbm241B/4Poa4BN4dY10zIeQMwfQ/qJps4Vw9mBym+cwj4CwUzuHXQ89utCezuFGUs8okEFCZDEbnXYbDr0pw4KXtCZcW2Hwt8QG2cA7r57ioTZCbOD8Gt5cmaGHO6jBj6ErpRXD9mWKBrbgmdUJVhrozLMH6mjOFQ6EXCwOvitiCPVD+lFsLaSVLKoPJ11UnoRyPtSoRbgKxwdlHjtzpMoZ0iOetR8TwC0+qSp1mPCep8J03pzawuzOoP1HPea7XcOGGoDadRsOlc0NoK/4b2aud+SSDpo2XUajYbT500cO7OWkOYrnfqfEeXM7b8qJ4fCoH025AHfnJ6UTtJpG3pXIaEL5FvBcDCufCBO8b/OjtrComygTz51ICRQDt9xFrGFdkco50UiJB5nXyrnsVjjSIfbDj1jCjJIa83w21EvB3McvU1VfHeNXe8Lvct2tdAxLsPRBLfP5c6E2Wcy+Zme5JJB3X/MZnf70A4i3j3k8zsPRR0+9co6pUWUVFWH7vGbxdWGIuMvO6yOFGsxlDDw+o+2jDhOMukJdzqd0uIe8Rp5x4dPUkedV1Yusuqk+fT3qfZ4g6rlUDuzupErPUdPajPF0jlXZa/B+01r4WbUDxFRAK9fFBX9OtFcXgrN+2TbuFw2mhgDrmHWqOxGLLNmkzykkx6MfF9asD8HcWWxDWs0Z0JE7Zl129CdfKgsTirslkhFq0Re2XAzbtkgRLwfRQYFJmH4Wzlj+VdzMeg1q8u2PC1uWcrMQA2YtA2A1/5pM7X4G0lsJatjLkGsc53Z+cyOcmmjKtiEZNbFd31yAgsJ6Abe3KoZqXjbEEkDSYHnG5qJV0XieVgrDWCuGOrHU+potw4krbHjGrQcxA2Pw5dV1MHQz11oaVXOwJIXM2oEnSY0+VS7+IYWlhiDmOmXKAGH/mB/2pcivYMQadz716a1nnXs0wp2wd0o4dSQVMgjqKcOKYQYrDjE2/jUgMADpz18t49xSUpp0/Du+Uco0m1dGVx5EjX23+fWhJAZ72etZriFpK21LEa/l/5rcPfa93rTmJnXYDkoHSNIp44f2YKXHAQspBgg8iQdB9aMnhi5cpBGkQVEH1qMtiMtgf2TYkKAxUEZl8tYZT5f7dKNcYxq20zfkByhQBNxjvPkOZrTg3DltpAOxJHvUm/wAODlQdgGO06k6wPlSk1ZK4NeL2xqYiRtI/ymd4n7VLuWgokb840H+ocqicKtZGKgaCDt+nvRC7JkEAgjrr70Uisf07nHDW/FJkjX295miCioWJdbVsu50Ufaluz2rzeIQqFsqkxJ0JJCyPCAp1+Q1rPl8mMJKL5NGPDKStDkxqqPxu44gC2EILgeLyzRp66fauXGfxNuLdy2lUqpIIO596rftXj2vX7lxvznNryMaj71TFN5HuqXI8sbhu2RrOLZUZ+Z8KnlJkkgeQmBtr61wa2HysN2zSNzodPeBURnMAchU/g1nM6gN5t/ljaD13+daZJRVgjctjlhFZSHCyMxWCNzAMHrvRw8J7xc1s5GicpPz+0a/WiXZjhWcvbK5oZmt+65jPQ5V086L9lmRrtp2ANty6POwFxQ6H+YNkP+onlWTJm3uPReOKluIWIwJMx8QMMBO/mI0+1FOxjXrWIS5bWWRgcvPzEHyo92u4CbN92ALBF8RH5rbbE/5gTH+kHnSx2fvPauC+ZIBAiRqdwGn8ulUhl1wdCTgosuPt1xNHwYEENdUeE6MOZmkPAWrjWDbJZrUrAjMQwObw9Bp6U5cd4d3lnOBpoR6cvbWhl+13NkKRIOsTEHbb0AplsjzZStiTx3h8WwI/uZ+1Kl62QasHGOrCMumpgRp9PWk/joGbaKrB9FMct6BdeLXV1gDzFcxTlidg8N3lzJMSTr70Z4j2avroATaQnxkKunUjcxrvPlQvg1kvfABX4vzGAddqd+KcODzKw0AEm5aAVVmcuXUGCdB71i8ryJY8iSap/RbHBOLZWprK6YpVDsFMqCQD1E6GudbbskbWhrvVg9hLC5lBYfI/0qvrZ1pq7M40owOtcxWfRPDba92sQdK1xKieXvSr2d48TbidQNPWRU+1xdWuLOivpqfheYg+p0+XWpsR7k66yjSAa0NxVGqkHyP6GpWJtjYD3rj+zqUHeNG+/Sf7+lSlJJWxNLbpHfBNOqsD/fOpyqecUAx/ErGEtvc3CpmgGWYzAHQf30rh2N7XpjBBXIx2B5jy86l68UXhilVsg9veJozDDkkL+eOm+p5Dl1PpVb467mvO2YlACqAaQscumsfIVZ3aLggvYhyVOUoWkcyMsR5/EKQsFwlGxL4Y2yrgTmmQBkz6nloRPSetecouWSUpfZ6uGUI40hHvOrOZaH6nZvM+dcuKuzIM0aHlRTiVq0G+AkwSdSCYgQOp1+VMHHOzoucOz2rJF20wL7y1vqOsEjXoDXpQyJOOxDLDZlbxTJ2VS3kcsRImBOp00oRwqypuQ+w3o23D85/dWFaNdmzEdZXWr5GnsRxqvcOXB2IW2bYHeKYIgwRBh8w20ZhPOdq7ixZwiqmYPchMloGX0BVg42KspPi3EyAahdhMUWuLYFu5BB0JkiNIliOfWiHEuzHestzNctkkyumdSrQQ2sHblPTavNmqnT2Rr1LTtyH8Bgzc8b2haQkEqWUzpsQNoIB9uVVRxTC93jMRbUQneEqPLdfo31q4+HcKyZLaA5SPGHbXwxrpO86jzG2tL3GuyTXuKs0RaY22Y9QqqGj5AVTxajJ/Bmyy1IaMLhT+y5G+IIs+uUT9aXuJ28xtknl/Wnu7Y8TDlA/pSlxS3GTlH6Gth5U1TFzGWhbZtBzGoB9/cc6S+0toL3gCgnaSNQOopx467MTr5COfnSH2gtnmaeCGhyBbnwL7/c1HWpi25t7bMfsP61EA1qpoQb7M32t3sygETrIkRO5FOnGmCWHfKgOUw/d2gsxplAYtPTTf0oD2N4hYtWWD3HS4x2S2rHL/ADsunsaIcfw+EZiXuXVfIJm20mBAjwieWu3nXkeT7/IVppLunuXi0oOnv+9FfHc1sg1rtjbaK3gcuvUrlPyk1ztCvXTtWRO1ixrPKmfgaDpsfegWHXSmDh6jSTE1OTJSY68EwxzgA6CJPuN6N8YwYUG4f8NoFyNlY6Lc9Pyn2NBuyqkj4iJMERqQNfYaU+cNFt7TI4BUjKQdiDpFSi9xIP3HDs/j89spcP7y2IYnTMvJ/wBD5g0udoOLu6uLWpZHcR+W2rKigR1NwN6A+Va8W4fcAu2kc97aWAf47TQUkc9oPmvnSf2Y4xlxndXBI7h7JEkSTbRoEAmZtmNOYqOaLnxwbsKit+zW5ZcWcovG53mec0nK8iCfOQB0AiIol2QxSrbKOoRwdUJCkxpNtzoGnUdDodDpG4ZgBluOisGRiHUltGEwSMo5K239KPdisN+2d4l+xbNsLC3Ih9R4TqxP05RWWSbtM2PTGNjV2d4sbpysQ8KxVwMuYAgMGU/C4MAjl8iRXELtmybrkfvrisiEAklirNlkDSQp1NIvYu7+z4h1e+Lbi/4QznLcCnK6sSfzIQRPMDrVgdtL7JZud1aNwuupBUBVjeSQOenrXSjpeknCPur5EbiLYa6qXLXhdT3dwEEHMBKkAjUEA6inb8OycrK2vrVYcM4mWlHskQ0hgBAM842qy+xl/KubkYpJpxlRpyK4NETtX2Ottfe9ZQISnjymP3nIqBsSIB9RSnw5RmIiHWd9tNzrtT8tpr+K7wgpZTTN8Km4G8RM6EjQT6jkaVu3PDgl1nQjKxOqmRrykVphqlHczwai0r3InYe9/wDPKxgEyT6eVWJxmwxJa2wBPxjSDpAcaGGA0kb6dKqThmItrfUXLot676mD/p1mrH4TjVW3+6RndozuQRnjbx3IkR0qXkJqX8D6G1qQW4GCGCyzQBLMZJPPX1qVw+6XxF+dkKKh5QBLD1n+9K14Ic0HaeXnRDIlpSSYBPiPUsdz7mq+Mr9zMedq6RIy+InyoDx7h6lSQ2xJijYAiQZnz/pUK+UJjwe4J+9bDJNJorXjqsk9Drt8qQ+M2XdxAZgSNl8/Srw4mbY3uAfy2xNLnEhm0C3mHWIHyg0VKiC9pV2Mw7qoRbTwP8p9yTG9Bb+GedVI9asziuCaCQlz/UwFJvFLEEyAD/NP2q0XZeEzTsbgrVy7FwsdDCrMk+UA008Tu2+6W0ndXdYZZc3J/MfERkPkKVOxt4peBDBQdCxE5Z0kDr8vWmjtKVbDXCrRrz7qSVO3hMnUbiR615Xl3+Yjbdbd9mqCuL+RBx4XOcnwyYnpOla2BrWlyZkiJ+3UeX9K62a9Xoj0EcKk7UzcC4dmiSQD67Us4e5ER8qsPsqobLmQkAa6mNN4jnUMjojIZeA8MZWVk5ATvrHOflRTH402bejSdZI6TPLn51newngUqImSZAA/val/HcRDJdDKSq2yXcCXIlVLqCfygsY57V5mbNKXsjtZr8fCl73uK9zto645blwHKWNthoFyzsOfQyeevKivaDh6W8XYx9sAWy6l4GkH83tJPz6UkcV4bca81t1hAVhhqrZ4yurHcMDI9aeezd7w/sdwymyE9RGbfad/X1rdCUdKh3RSUZJ61wGLHEUw7KSFA7wGSQA0gr4jHKSaP8PKILl+baooYyhGXKNZJGmgpAxeEAbu7yh1X/DYgnToY5j6iKi9u+LC3hkwlqEF0/vcugyjkY2UnfrFZfSbkol5yi4akIeO4i9/Ed40AZpUARAzSJ8+tW52KxX7RhWs3MzEZu7GxKgA5Z99PKelVNw9ZyvlnNchVEZoA8UD+tWz2DVF7xlWCo/dywymTqwmckCeexqnlUtKSJ45bNtiscD3bP3gZQCfSnLsXg7l5QzjurI2nS5c9P4V89+nWiOJ4bYJ792W6WGZRINq2InN0Y+Z08qW+L9sCDkw+3O6w8O8fux+Yzp0pMeO3udl8mo1EdO1+MsW8I9pmVe8QpbUCYMQGC9FMGfKkbhL2VQWQM2cgNJks7aSOh20FKWO4jcuszNcZjJEkToPOvOH417bqZWVZWBIMggzuRW3TtR57lJyUkH8Fw9VxBBYDmjgSWB/hNNNnD2ws97cYzBDNMnpAqreN4i6mKdVdkRXBLESLYc79IhswHQ1bPZbg/djxMWj8zRLeen2rJlxttbnp+ulAaOB2MiAnc8unl60A/Erja2raWVM3LjKYG4RW+I+pgD3oxxHiFvD2Xu3DlRFJP6AdSTAA6mqFbjdzEYm7iLhMtJAnRRsqjyAgfWtGOG23CME5Nptll4ftDdSCCdeRIA+Rorw3tPmcJcCJOzjUT/mgfWqcvcaIOjn712wXH7nKW9dvtVNMqM6i0Xpii3/AHiL7Glvi7pBz4knrCn+tLHBe1ptwt63KnbNqAPIgyPTUUwftIupntYZHUmJVAY8jvQFYvcQv4cbXLjn2ApV4s1szlVj6mnfEd/sMMo/8NR96WeOJdAaUCiD/CKeDGgAuxWKNu6x7w2lKGWABO4gAFln5/anG9xVBbDHHXAC2jC1qTzAHeQdt5096rJHI2rDcPWo5/DWWetv/DbDI4qif2kxXeX2bObgAADndhuCdTG+1RsPUWak2l0861RioxUV0Tm73JuEALeX1p67J4qBkNsk8p2ikTCpqNtN6auFMvhGcfWo5FZCQ+Brty2QXheg8uWlCOLo1u02Qh7t20gyckz3VCiB6MfOKn8NxSFMpMgdJ26bb/Wo/ZO3cu37t+4hKhVKDl4WbQe2nlXnvElO+WbMORuP0j3h/AmtW7S4gBpP7lnJ/dXCRAI2ykklJ2bT8wrj+JOGt2bmE7o5bpOkfEwMTI/0yPOn61es4myufVbyDwMwBIYaqOehnbmKrbt9aZWcXGLXsLbJttGt2yZUXDGzrmKt5w2gNUUNLUuWOpttph+zcTE2VuDI+WQYGhIkSOUc/nVUdsuKG5eNvJlCEqZkEkH7Uwdie0aWLtmyWzIbazpAV2JYoSPi+I69dNeU38WezqsP2yyvId6BzUjwv7bT0jpW2CTepog3p2K6sPEFTBHU+f8AvTd2ax7W8NeLqCrOtqCSFTvPiugidvDEecUkCnXs1kXCLJDFnLFI/MhIUsf4QDsNSem9L5MVpqr3RylpdhTFcR7vCWrALMgX4WMF2LFoJ3FlZygbtHIClu/jCfG5kLoI0k7Qo5dAOQrfi90vcykzOrHy6eQjQDlUDE4hTtsuijy5n1JEelDHird8kZT1G9vEPl1RYOvn865BwpD+LQiVOnPUT0qGhe42VTv8gPOumOYCFGw+vnVq3oNBKxxhzaxqMmcX/Eza/u2DyD6cqt/8P+JC5w6zedx+7XJcJMQbRKkn/SFPvVG4bHPbZihjMrKfRhBpu7Ovcw+HNtmJzsLndQMtswIa51eACE2GhOsCs2WKhbS3b/t8F200r6O/4sdpGvlbatltzITUMQNnuDlJ+Fd410mkS1eIVh1qT2huTiH1JiNTuTGszzkmoCmtOKGmCTEdPg62RJ1qd+1AQByoejRW2HWVfyj707ROS7DNnE5rBZpJkyf9WlEOEcZuWxKMQCJIBIGhj9aC4W5GHuLzzfQr/UVHu34yx/CR8zNT0W2DTexZoYXrfeLeMbEZSSp3gkGKX+O2QAZuEwD+WOXrS3w3ijIdDpzHI+VG8XxC1cU5bYzRtr06zXKLTF0NMTRXhrYCvDVi5oKlWTUYVNwgFBglwSsPvRzhpihFm0tFMDl61JkZDdgczBQqMQd4/rTvwKyoCjIw05nTQT08qQeHIGAytqKeezDtJBbw5W57VCSq2LB+5ID/AIaMobEIRqGDjQGVaVK9SAUn/VU7tzwu3d7txdNm+gZreha2+gUpcESUIIEeZpV4bxO3huItc7xf2Yo6loPxHVTHMSI9617c9ucLetlbDOLiB1DMhUEsu6E9GGxj3oRhKlsbZyUpNxYu/wDwbcu4f9ow1i4GzHNaJAKEE62maMyDQddNzNOX4Z8YTGYc2bhGe2CGBHxIdNvL7HyNL/Bu19x3tiItoFlAID9SRuT0G36HuN4REA4nhEW1dtS122Ii5bnxsQNMwEmRuMw86EMzUtM/4KTw+20Vt244A2CxLWyD3beK2eq9J6jb5HnRbhid3ZX+UH6amnjtLg7fEcH4fig3LT77fErHymD86RMexS1kOjAZT67VrbtGHLwkBsfdJBInNcaB1gf2BQ64+kef20ijvBravikB+G0ASI5zJP6UN4xZC32QCIOusyTuR5E6xSxyLXo7qykYVDUbWlNtByL6+cbAf31qDiHlqkYm9LE+dQzVIrsEV2TOHQWB1zddNP8ANrz33pkw18LbZjplBmeZ3n1pUstqIGv9zRXi12LIXmx+g/sUko3IE1bSA1xySSdyST7614m9eV6oqpQ3nWt7DRmHUfY1yrC3OhQtEnPAuDrl+lRC1b5t65Gu4DFGE1MwWKZCSp3BBHUVCrBQC0dgK1IqRhsM9wkIJIBMSBoNzqR8qY8TggbbKMKQ8EByLQmQLamFaFOZZkbmdg9MCxRNScO9R3Feo1BnPdBS1cqVgn1oN31ScFc13qbiTlHYc+F4kiJpjwmPGUozZQ/hGu88vfb3pO4c0xXPtTdyhDJgbAGNev0pIxtkErlRC7Que8bNplJMef5f0pdJolxnFvdIuMviKqGP8TKIze4A95oYauaoKkG+B8VVCVuSZyhSIEcjNWR2enIbeYMrgi6xI1QjULpBJ0HQCqbo32b4lcW4qBmIbSBJb0HX0rHn8fV7om3Hm/4yHPsXibmDxLYG6xCMZtOdmWYBHkYg9CPKun4k8IysL1seBj4h0I5fb6Vt23Rf+n2nchb9q4GTrlc5Wt/IBj5ij3AuIW8dhClw+IDI/rBy3P0Pr5iqwbcU3yY8ii20isOzOPt2xcJjvGOhJiVMGBOkyPr5ULxdzNeJJB8Q1GxAPI1K7QcJbDX7lphtMelC12po4oqbmuxnK40bud6zCj4v5TWjmsttE+lVoStj3C/EPWpfGX8QUch9TrUXCLLCvcU8sx8/tQ7Or3HGi3CODXLqC4AO7z5WaRPInw7nehNN3YxlNkqTP734ZkyUkMVBkjw+exqHkzlCGqJbHBSlTOnF+zaHEOO8W0oXMxKEAmY8KmI6a8xSpjcObbshMxsRsRyNWlxlVuIwuKoYrAc7jlIPkY+lVjxRjnIYRGwO8biehgis3g+Q8re+yHyQjGK+SIDWhrY1qa9IiYaxayvVrjidhb7W5KmCQQdAdDvuDUk8Zv6xc338Kf8A8+Q+Q6CoAIA1+9aO46j51xM5tXlbE1irPpXDoy3bJMASaJYLh9w/CUPowMesUPt5nORflMfM86JcBYJdKzJO8bach19alNtJ0LLgLWbfdDNcuD0H2nnXT/qVm4QrgHpmH2mo2MTOzs05VAAGxJJj1jT7UJt2c6uUEZVk6kgiJ57MPKoxjqVtklVjRcsWmEKo9vtRSx2Ws3U+HIxiSuoHOCD+lL/ZdDAb+BGcz1GgmiHC+19xWIFpWWd8wWfQkwag/UUmovgvCluxf7VdnbuEYZhmttorjaejdG8qB1c3DsfZxtt7NxPiXxI2hjqI+jDpVUdoOGthsRcstPhPhJ/Mh1VvcfWa04curZ8oeSOOKxty4FDuzZRAzEnT150w9kONnDXlc6228Nxf4lJAP9+Q6Uq11Z9Ku0TaLd/Engi38Ot622dgoM/xJup9tj/tVQGRI2IOoqzPwv4+bls4RyCySbWb8y/mTzkTp68zS12/4KbN3vEUhH19OUH02+R51y22CK5Na1hNZTHEnBGCT0FR5rtbMKT7VxrgLk8pq/D7CFrrXdItEM2ozQVYaLGv9YFKtSsBjblls1tyjEQYgyOhBBBGlQz43kxuKdNlIS0uyyON4wPlRCCDJVghhQykEMORn0386rnjFsJeuKGzANExHrz5HT2rtiuNYi4PFcPsFU676qAeVDjWfw/FeBU2NOepUamvDWGva3kzysFexWAVxw6fhtirdu5czuEJRcr5bxKhXDtHdITByqDJGhiddHHE8Vtw7m7bzuoLsli/bNxkIZbmZAxVMmVMumhYzLaVAjkV61w9T8/KPtpQoSjbiN83Lly4QoLuzEIIUZmJhRyXXQVynw+tcya8NENHfBWS7QNIBJPlUvh9opdzctYOh5/eoWDxJRs0ToQR5Gp6YtWIAHr09BUp2LO+gjjg51t6/rWWWvMpQKq5hBMGYO8npUnCjTTSvcRjO7nMDlAmdNfKKgptbJE6QT4Xg8uGvESR4LYPvJPvH1oTxPhrKitbWVKmCMsZ9dCX0jqN/rRXshxi2QUYgZzGVj7z66CKYm4c9sZ7FzIDuDBUnfUHnWb1JQm9SL6LigLwHhj2buFOwugtBEZYkGOeVgQfPKDR7t3wNMXZ+NUuWySrtttqrncKdD5ECtWuEHvbzh3UaEbTsIHSCdPWkXtZ2ke4WtKTknxa7kcvSftQxTlkyXFFa0xoX+J8PuWXyXFgxIIIKsOqsNCKjzUs3i9soTIHiXyPOPUfpUIGvUjfZJOyRgMW1q4txCQykER5VbbFMfhwQAQ415BLkaz5NP1PMCqcpm7DcWNtnsFoS6pXeIJ5zI/uaLCA+KYNrVxkYEQTE7+/mNqiimXtMsgZ9XgNIIOXkQ4DGPmPQUvJaJYKASxMAAEknoANZrk7OPS3hArSi1vh6KLiXTluDKAZ/doSZJZhOYgArA0Gu8UIogNlFeVsjAakT1G1E8PbtlQwUe+seWtEDlQLFYFNT8RakkiAo3PIVEuXAJC+55n+grgKVnJ1itSa8Ne0BzKwVlZXHG4rysrKIDQ17WVlAJoa6Yb4hWVlLLgV8DTg9vaonaH4fl96ysrLH9RBcgvhP+Nb/nX7irdP/Zm9R9zWVlS8v9RsiBm29xVbXPib+Y/c1lZSfh/Mg5Oj3C1wrKyvT7IrlmV3wX+In8w+9ZWVwwf45/ir6H/3KLcP/wC0v/8AhP8A6RWVlKgC72o3T+a591oKKysplwE9NTMB8J9f6VlZTE58HTG/B70ONZWVwYcGVlZWUBzyvRWVlccf/9k="
-          alt="image">
-        <h1>Pelicula 2</h1>
-        <h2>Resumen de la pelicula 2</h2>
-      </div>
-
-      <div>
-        <img
-          src="data:image/jpeg;base64,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"
-          alt="image">
-        <h1>Pelicula 3</h1>
-        <h2>Resumen de la pelicula 3</h2>
-      </div>
-
-      <div>
-        <img src="https://i.pinimg.com/550x/3b/74/c4/3b74c4b65eb80afdd13146f6c68e26a9.jpg" alt="image">
-        <h1>Pelicula 4</h1>
-        <h2>Resumen de la pelicula 4</h2>
-      </div>
-
-      <div>
-        <img src="https://i.pinimg.com/550x/3b/74/c4/3b74c4b65eb80afdd13146f6c68e26a9.jpg" alt="image">
-        <h1>Pelicula 5</h1>
-        <h2>Resumen de la pelicula 5</h2>
+              <div class="col">
+                <div class="card card-movie">
+                  <img src="https://portadascreativas.com/wp-content/uploads/Matrix.jpg" class="card-img-top img-fluid"
+                    alt="Imagen de la película">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la película</h5>
+                    <p class="card-text">Descripción de la película</p>
+                    <div class="d-flex justify-content-between">
+                      <span class="badge bg-secondary">Género</span>
+                      <span class="badge bg-secondary">Edad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Agregar más elementos .carousel-item según la cantidad de películas -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </div>
+
 </div>
-</div>
 
 
-  <ng-template #ModalIniciarSesion let-modal>
-    <form #RegisterForm="ngForm" (ngSubmit)="OnLogIn(modal)">
-      <div class="modal-header">
-        <h5 class="modal-title">Iniciar Sesión</h5>
-        <button type="button" class="btn-close" (click)="modal.dismiss()"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="form-group">
-            <label for="registerMail">Email</label>
-            <div class="col-auto">
-              <input type="email" class="form-control" id="registerMail" name="registerMail" required
-                [(ngModel)]="userRegister.mail" #registerMail="ngModel"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
-              <div *ngIf="registerMail.invalid && (registerMail.dirty || registerMail.touched)" class="text-danger">
-                <div *ngIf="registerMail.errors?.['required']">El email es requerido</div>
-                <div *ngIf="registerMail.errors?.['pattern']">No se permiten espacios en blanco</div>
-              </div>
+<ng-template #ModalIniciarSesion let-modal>
+  <form #RegisterForm="ngForm" (ngSubmit)="OnLogIn(modal)">
+    <div class="modal-header">
+      <h5 class="modal-title">Iniciar Sesión</h5>
+      <button type="button" class="btn-close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="form-group">
+          <label for="registerMail">Email</label>
+          <div class="col-auto">
+            <input type="email" class="form-control" id="registerMail" name="registerMail" required
+              [(ngModel)]="userRegister.mail" #registerMail="ngModel"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+            <div *ngIf="registerMail.invalid && (registerMail.dirty || registerMail.touched)" class="text-danger">
+              <div *ngIf="registerMail.errors?.['required']">El email es requerido</div>
+              <div *ngIf="registerMail.errors?.['pattern']">No se permiten espacios en blanco</div>
             </div>
-          </div>
-
-          <div class="form-group mt-3">
-            <label for="registerPassword">Contraseña</label>
-            <div class="col-auto">
-              <input type="password" class="form-control" id="registerPassword" name="registerPassword" required
-                [(ngModel)]="userRegister.password" #registerPassword="ngModel" pattern="^(?!\s*$).+">
-              <div *ngIf="registerPassword.invalid && (registerPassword.dirty || registerPassword.touched)"
-                class="text-danger">
-                <div *ngIf="registerPassword.errors?.['required']">La contraseña es requerida</div>
-                <div *ngIf="registerPassword.errors?.['pattern']">No se permiten espacios en blanco</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="button" class="btn btn-link mt-2 float-end" (click)="openModalRegistrar(myModal,modal)">
-              Registrarse
-            </button>
           </div>
         </div>
 
-
-      </div>
-      <div class="modal-footer">
-        <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-success">Iniciar Sesión</button>
-        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
-      </div>
-    </form>
-  </ng-template>
-
-  <ng-template #myModal let-modal>
-    <form #RegisterForm="ngForm" (ngSubmit)="OnRegister(modal)">
-      <div class="modal-header">
-        <h5 class="modal-title">Nuevo Usuario</h5>
-        <button type="button" class="btn-close" (click)="modal.dismiss()"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="form-group">
-            <label for="registerName">Nombres</label>
-            <div class="col-auto">
-              <input type="text" class="form-control" id="registerName" name="registerName" required
-                [(ngModel)]="userRegister.names" #registerName="ngModel" pattern="^(?!\s*$).+"
-                title="No se permiten espacios en blanco">
-              <div *ngIf="registerName.invalid && (registerName.dirty || registerName.touched)" class="text-danger">
-                <div *ngIf="registerName.errors?.['required']">El nombre es requerido</div>
-                <div *ngIf="registerName.errors?.['pattern']">No se permiten espacios en blanco</div>
-              </div>
+        <div class="form-group mt-3">
+          <label for="registerPassword">Contraseña</label>
+          <div class="col-auto">
+            <input type="password" class="form-control" id="registerPassword" name="registerPassword" required
+              [(ngModel)]="userRegister.password" #registerPassword="ngModel" pattern="^(?!\s*$).+">
+            <div *ngIf="registerPassword.invalid && (registerPassword.dirty || registerPassword.touched)"
+              class="text-danger">
+              <div *ngIf="registerPassword.errors?.['required']">La contraseña es requerida</div>
+              <div *ngIf="registerPassword.errors?.['pattern']">No se permiten espacios en blanco</div>
             </div>
           </div>
+        </div>
+        <div class="col-12">
+          <button type="button" class="btn btn-link mt-2 float-end" (click)="openModalRegistrar(myModal,modal)">
+            Registrarse
+          </button>
+        </div>
+      </div>
 
-          <div class="form-group">
-            <label for="registerMail">Email</label>
-            <div class="col-auto">
-              <input type="email" class="form-control" id="registerMail" name="registerMail" required
-                [(ngModel)]="userRegister.mail" #registerMail="ngModel"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
-              <div *ngIf="registerMail.invalid && (registerMail.dirty || registerMail.touched)" class="text-danger">
-                <div *ngIf="registerMail.errors?.['required']">El email es requerido</div>
-                <div *ngIf="registerMail.errors?.['pattern']">No se permiten espacios en blanco</div>
-              </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-success">Iniciar Sesión</button>
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #myModal let-modal>
+  <form #RegisterForm="ngForm" (ngSubmit)="OnRegister(modal)">
+    <div class="modal-header">
+      <h5 class="modal-title">Nuevo Usuario</h5>
+      <button type="button" class="btn-close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="form-group">
+          <label for="registerName">Nombres</label>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="registerName" name="registerName" required
+              [(ngModel)]="userRegister.names" #registerName="ngModel" pattern="^(?!\s*$).+"
+              title="No se permiten espacios en blanco">
+            <div *ngIf="registerName.invalid && (registerName.dirty || registerName.touched)" class="text-danger">
+              <div *ngIf="registerName.errors?.['required']">El nombre es requerido</div>
+              <div *ngIf="registerName.errors?.['pattern']">No se permiten espacios en blanco</div>
             </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="registerPassword">Contraseña</label>
-            <div class="col-auto">
-              <input type="password" class="form-control" id="registerPassword" name="registerPassword" required
-                [(ngModel)]="userRegister.password" #registerPassword="ngModel" pattern="^(?!\s*$).+">
-              <div *ngIf="registerPassword.invalid && (registerPassword.dirty || registerPassword.touched)"
-                class="text-danger">
-                <div *ngIf="registerPassword.errors?.['required']">La contraseña es requerida</div>
-                <div *ngIf="registerPassword.errors?.['pattern']">No se permiten espacios en blanco</div>
-              </div>
+        <div class="form-group">
+          <label for="registerMail">Email</label>
+          <div class="col-auto">
+            <input type="email" class="form-control" id="registerMail" name="registerMail" required
+              [(ngModel)]="userRegister.mail" #registerMail="ngModel"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+            <div *ngIf="registerMail.invalid && (registerMail.dirty || registerMail.touched)" class="text-danger">
+              <div *ngIf="registerMail.errors?.['required']">El email es requerido</div>
+              <div *ngIf="registerMail.errors?.['pattern']">No se permiten espacios en blanco</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="registerPassword">Contraseña</label>
+          <div class="col-auto">
+            <input type="password" class="form-control" id="registerPassword" name="registerPassword" required
+              [(ngModel)]="userRegister.password" #registerPassword="ngModel" pattern="^(?!\s*$).+">
+            <div *ngIf="registerPassword.invalid && (registerPassword.dirty || registerPassword.touched)"
+              class="text-danger">
+              <div *ngIf="registerPassword.errors?.['required']">La contraseña es requerida</div>
+              <div *ngIf="registerPassword.errors?.['pattern']">No se permiten espacios en blanco</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-success">Registrarse</button>
-        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
-      </div>
-    </form>
-  </ng-template>
-</div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-success">Registrarse</button>
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
+    </div>
+  </form>
+</ng-template>
