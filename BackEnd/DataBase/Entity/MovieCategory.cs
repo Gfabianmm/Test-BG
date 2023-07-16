@@ -6,12 +6,15 @@ namespace BackEnd.DataBase.Entity
     [Table("MovieCategories")]
     public class MovieCategory
     {
-        
-        public int MovieCategoryId { get; set; }
+        public int CategoryId { get; set; }
         public int MovieId { get; set; }
-        public string Description { get; set; }
         public DateTime CreateAt { get; set; }
         public bool Deleted { get; set; }
 
+        [ForeignKey("CategoryId")]
+        public virtual Category Category { get; set; }
+
+        [ForeignKey("MovieId")]
+        public virtual Movie Movie { get; set; }
     }
 }

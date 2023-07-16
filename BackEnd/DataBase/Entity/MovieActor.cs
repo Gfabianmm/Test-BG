@@ -14,5 +14,8 @@ namespace BackEnd.DataBase.Entity
         [ForeignKey("ActorId")]
         public Actor Actor { get; set; }
 
+        [ForeignKey("MovieId")]
+        public virtual Movie Movie { get; set; }
+
     }
 }

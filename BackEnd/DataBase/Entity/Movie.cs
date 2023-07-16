@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackEnd.DataBase.Entity
@@ -8,24 +9,22 @@ namespace BackEnd.DataBase.Entity
     {
         [Key]
         public int Id { get; set; }
-        public int MovieCategoryId { get; set; }
-        public int MovieGenreId { get; set; }
-        public int MovieActorId { get; set; }
         public string Name { get; set; }
         public string LongDescription { get; set; }
         public string ShortDescription { get; set; }
+        
+        [DefaultValue("")]
+        public string Url { get; set; }
 
         public DateTime CreateAt { get; set; }
         public bool Deleted { get; set; }
 
-        [ForeignKey("MovieGenreId")]
-        public virtual List<MovieGenre> MovieGenre { get; set; }
+        public virtual List<MovieGenre> MovieGenres { get; set; }
 
-        [ForeignKey("MovieCategoryId")]
-        public virtual List<MovieCategory> MovieCategory { get; set; }
+        public virtual List<MovieCategory> MovieCategories { get; set; }
 
-        [ForeignKey("MovieActorId")]
-        public virtual List<MovieActor> MovieActor { get; set; }
+
+        public virtual List<MovieActor> MovieActors { get; set; }
     }
 }
 

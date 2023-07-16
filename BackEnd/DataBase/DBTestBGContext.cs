@@ -1,4 +1,5 @@
 ﻿using BackEnd.DataBase.Entity;
+using BackEnd.DataBase.Entity.Seed;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata.Ecma335;
 
@@ -14,17 +15,24 @@ namespace BackEnd.DataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<MovieActor>().HasKey(e => new { e.MovieId, e.ActorId });
-            modelBuilder.Entity<MovieCategory>().HasKey(e => new { e.MovieId, e.MovieCategoryId });
+            modelBuilder.Entity<MovieCategory>().HasKey(e => new { e.MovieId, e.CategoryId });
+            modelBuilder.Entity<MovieGenre>().HasKey(e => new { e.MovieId, e.GenreId });
+            
 
+            ActorsSeed.Seed(modelBuilder);
+            CategoriesSeed.Seed(modelBuilder);
+            GenresSeed.Seed(modelBuilder);
+            MoviesSeed.Seed(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Actor> Actor { get; set; }
-        public DbSet<Movie> Movie { get; set; }
-        public DbSet<Category> Category { get; set; }
-        public DbSet<MovieActor> MovieActor { get; set; }
-        public DbSet<MovieCategory> MovieCategory { get; set; }
-        public DbSet<MovieGenre> MovieGenre { get; set; }
+        
+        public DbSet<Actor> Actors { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<MovieActor> MovieActors { get; set; }
+        public DbSet<MovieCategory> MovieCategories { get; set; }
+        public DbSet<MovieGenre> MovieGenres { get; set; }
         public DbSet<Users> Users { get; set; }
 
     }
