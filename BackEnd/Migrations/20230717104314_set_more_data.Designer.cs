@@ -4,6 +4,7 @@ using BackEnd.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEnd.Migrations
 {
     [DbContext(typeof(DBTestBGContext))]
-    partial class DBTestBGContextModelSnapshot : ModelSnapshot
+    [Migration("20230717104314_set_more_data")]
+    partial class set_more_data
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,7 +58,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9425),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6511),
                             Deleted = false,
                             Description = "Actor famoso de Hollywood",
                             Name = "Brad Pitt"
@@ -63,7 +66,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9435),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6521),
                             Deleted = false,
                             Description = "Actor destacado en múltiples películas",
                             Name = "Leonardo DiCaprio"
@@ -71,7 +74,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9436),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6522),
                             Deleted = false,
                             Description = "Actriz talentosa y versátil",
                             Name = "Meryl Streep"
@@ -79,7 +82,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9437),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6523),
                             Deleted = false,
                             Description = "Actor icónico de la industria cinematográfica",
                             Name = "Tom Hanks"
@@ -87,7 +90,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9437),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6523),
                             Deleted = false,
                             Description = "Actriz conocida por su papel en películas de superhéroes",
                             Name = "Scarlett Johansson"
@@ -95,7 +98,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9438),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6524),
                             Deleted = false,
                             Description = "Actor reconocido por interpretar a Iron Man",
                             Name = "Robert Downey Jr."
@@ -103,7 +106,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9439),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6525),
                             Deleted = false,
                             Description = "Actriz ganadora de premios y reconocida por Los juegos del hambre",
                             Name = "Jennifer Lawrence"
@@ -111,7 +114,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9440),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6525),
                             Deleted = false,
                             Description = "Actor destacado en películas dramáticas",
                             Name = "Denzel Washington"
@@ -119,7 +122,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9441),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6526),
                             Deleted = false,
                             Description = "Actriz talentosa y versátil",
                             Name = "Emma Stone"
@@ -127,7 +130,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9441),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6527),
                             Deleted = false,
                             Description = "Actor conocido por su interpretación de personajes excéntricos",
                             Name = "Johnny Depp"
@@ -135,7 +138,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9442),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6528),
                             Deleted = false,
                             Description = "Actriz versátil y ganadora del premio de la Academia",
                             Name = "Anne Hathaway"
@@ -143,7 +146,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9443),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6528),
                             Deleted = false,
                             Description = "Actor australiano conocido por interpretar a Thor",
                             Name = "Chris Hemsworth"
@@ -151,7 +154,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9443),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6529),
                             Deleted = false,
                             Description = "Actriz versátil y ganadora del premio de la Academia",
                             Name = "Natalie Portman"
@@ -159,7 +162,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9444),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6530),
                             Deleted = false,
                             Description = "Actor conocido por películas como El lado bueno de las cosas",
                             Name = "Bradley Cooper"
@@ -167,7 +170,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9445),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6530),
                             Deleted = false,
                             Description = "Actriz y activista conocida por su papel en Tomb Raider",
                             Name = "Angelina Jolie"
@@ -175,7 +178,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9446),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6531),
                             Deleted = false,
                             Description = "Actordestacado en películas de acción",
                             Name = "Keanu Reeves"
@@ -211,35 +214,35 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9549),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6629),
                             Deleted = false,
                             Description = "+18"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9551),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6631),
                             Deleted = false,
                             Description = "+21"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9552),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6632),
                             Deleted = false,
                             Description = "+12"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9552),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6633),
                             Deleted = false,
                             Description = "+9"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9553),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6633),
                             Deleted = false,
                             Description = "Todo público"
                         });
@@ -274,140 +277,140 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9566),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6646),
                             Deleted = false,
                             Description = "Acción"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9567),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6647),
                             Deleted = false,
                             Description = "Aventura"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9568),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6648),
                             Deleted = false,
                             Description = "Comedia"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9569),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6649),
                             Deleted = false,
                             Description = "Drama"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9569),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6649),
                             Deleted = false,
                             Description = "Suspenso"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9570),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6650),
                             Deleted = false,
                             Description = "Terror"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9571),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6651),
                             Deleted = false,
                             Description = "Ciencia ficción"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9572),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6651),
                             Deleted = false,
                             Description = "Animación"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9572),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6652),
                             Deleted = false,
                             Description = "Romance"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9573),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6653),
                             Deleted = false,
                             Description = "Documental"
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9573),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6653),
                             Deleted = false,
                             Description = "Fantasía"
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9574),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6654),
                             Deleted = false,
                             Description = "Histórico"
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9575),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6655),
                             Deleted = false,
                             Description = "Misterio"
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9575),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6655),
                             Deleted = false,
                             Description = "Western"
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9576),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6656),
                             Deleted = false,
                             Description = "Musical"
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9577),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6657),
                             Deleted = false,
                             Description = "Deporte"
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9577),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6657),
                             Deleted = false,
                             Description = "Guerra"
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9578),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6658),
                             Deleted = false,
                             Description = "Crimen"
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9579),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6659),
                             Deleted = false,
                             Description = "Aventura espacial"
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9579),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6661),
                             Deleted = false,
                             Description = "Superhéroes"
                         });
@@ -454,202 +457,202 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9596),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6678),
                             Deleted = false,
                             LongDescription = "Un exasesino busca venganza después de que le roban lo más preciado que le quedaba: su perro.",
                             Name = "John Wick",
                             ShortDescription = "Un hombre en busca de justicia en un mundo de asesinos.",
-                            Url = "https://sm.ign.com/ign_es/movie/j/john-wick-/john-wick-4_htag.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9597),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6680),
                             Deleted = false,
                             LongDescription = "El agente Ethan Hunt se enfrenta a su misión más peligrosa hasta ahora cuando una operación sale mal y pone en peligro a millones de personas.",
                             Name = "Mission: Impossible - Fallout",
                             ShortDescription = "La misión imposible más intensa y emocionante.",
-                            Url = "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/724e9ee2cb3f3ac351566d0d82daa14e086b2f4ec9436d7274454198e5f2751b._RI_TTW_.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9598),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6681),
                             Deleted = false,
                             LongDescription = "Los Vengadores y sus aliados se unen para luchar contra el poderoso Thanos y evitar que obtenga las gemas del infinito y destruya el universo.",
                             Name = "Avengers: Infinity War",
                             ShortDescription = "La batalla definitiva por el destino del universo.",
-                            Url = "https://www.cinemascomics.com/wp-content/uploads/2018/04/poster-imax-vengadores-infinity-war.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9599),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6682),
                             Deleted = false,
                             LongDescription = "Batman se enfrenta al Joker, un criminal psicótico que amenaza con sumir Gotham City en el caos y la anarquía.",
                             Name = "The Dark Knight",
                             ShortDescription = "El caballero oscuro contra el príncipe payaso del crimen.",
-                            Url = "https://static.wikia.nocookie.net/batman/images/4/4b/Espanol_3584-1-.jpg/revision/latest?cb=20141102170439&path-prefix=es"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9600),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6683),
                             Deleted = false,
                             LongDescription = "En un mundo postapocalíptico, Max Rockatansky y Furiosa se unen para",
                             Name = "Mad Max: Fury Road",
                             ShortDescription = "La película muestra una historia deslumbrante.",
-                            Url = "https://www.dodmagazine.es/wp-content/uploads/2015/05/mad-max-fury-road.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9604),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6684),
                             Deleted = false,
                             LongDescription = "Un policía de Nueva York se enfrenta a un grupo de terroristas en un rascacielos en Los Ángeles.",
                             Name = "Die Hard",
                             ShortDescription = "El héroe que salvará la Navidad.",
-                            Url = "https://c8.alamy.com/compes/dtgr78/poster-de-pelicula-de-die-hard-pelicula-de-accion-estadounidense-de-1988-dirigida-por-john-mctiernan-protagonizada-por-bruce-willis-dtgr78.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9605),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6685),
                             Deleted = false,
                             LongDescription = "Un cyborg asesino del futuro es enviado al pasado para matar a una mujer cuyo hijo se convertirá en la única esperanza de la humanidad contra las máquinas.",
                             Name = "The Terminator",
                             ShortDescription = "El futuro está en juego.",
-                            Url = "https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/23865/23865_400x600.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9606),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6687),
                             Deleted = false,
                             LongDescription = "El arqueólogo y aventurero Indiana Jones se embarca en una peligrosa misión para encontrar el Arca de la Alianza antes que los nazis.",
                             Name = "Indiana Jones: Raiders of the Lost Ark",
                             ShortDescription = "La aventura comienza.",
-                            Url = "https://m.media-amazon.com/images/I/81UOBSDQh0L._AC_UF894,1000_QL80_.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9607),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6687),
                             Deleted = false,
                             LongDescription = "Un parque temático lleno de dinosaurios vivos se convierte en una pesadilla cuando las criaturas escapan y comienzan a causar estragos.",
                             Name = "Jurassic Park",
                             ShortDescription = "La maravilla de la prehistoria en la actualidad.",
-                            Url = "https://i.pinimg.com/originals/a8/a7/70/a8a7702721817c8289afefe6a8db969f.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9608),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6688),
                             Deleted = false,
                             LongDescription = "Un hobbit llamado Frodo se embarca en una épica aventura para destruir un anillo mágico y salvar la Tierra Media de la oscuridad.",
                             Name = "The Lord of the Rings: The Fellowship of the Ring",
                             ShortDescription = "El comienzo de una gran guerra.",
-                            Url = "https://musicart.xboxlive.com/7/e88d5100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9608),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6689),
                             Deleted = false,
                             LongDescription = "El Capitán Jack Sparrow se embarca en una aventura para recuperar su barco robado y salvar a una gobernadora secuestrada de una maldición pirata.",
                             Name = "Pirates of the Caribbean: The Curse of the Black Pearl",
                             ShortDescription = "La vida de un pirata nunca ha sido tan divertida.",
-                            Url = "https://basededatos.atrae.org/media/works/z8onk7LV9Mmw6zKz4hT6pzzvmvl.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9609),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6690),
                             Deleted = false,
                             LongDescription = "Un grupo de amigos se embarca en una aventura en busca de un tesoro perdido para salvar sus hogares de ser demolidos.",
                             Name = "The Goonies",
                             ShortDescription = "La pandilla más divertida en busca de aventuras.",
-                            Url = "https://r1.abcimg.es/resizer/resizer.php?imagen=https%3A%2F%2Fs3.abcstatics.com%2Fmedia%2Fpeliculas%2F000%2F004%2F490%2Flos-goonies-1.jpg&nuevoancho=683&medio=abc"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9610),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6691),
                             Deleted = false,
                             LongDescription = "Un aventurero y una arqueóloga luchan contra una antigua maldición y enfrentan criaturas sobrenaturales mientras intentan salvar al mundo.",
                             Name = "The Mummy",
                             ShortDescription = "La aventura más emocionante en Egipto.",
-                            Url = "https://i.etsystatic.com/22147411/r/il/ba2a32/3850948924/il_570xN.3850948924_j1eq.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9611),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6726),
                             Deleted = false,
                             LongDescription = "Una niña es poseída por una entidad demoníaca y un sacerdote lucha por salvar su alma.",
                             Name = "The Exorcist",
                             ShortDescription = "El clásico del terror que te hará temblar.",
-                            Url = "https://cdn.kobo.com/book-images/f9ab8287-7c5d-4650-9c92-371260037e85/1200/1200/False/leyendas-de-terror.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9612),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6727),
                             Deleted = false,
                             LongDescription = "Un escritor y su familia se mudan a un hotel aislado donde ocurren sucesos aterradores.",
                             Name = "The Shining",
                             ShortDescription = "Una historia de terror psicológico que te mantendrá en vilo.",
-                            Url = "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/mejores-posters-cine-terror-miedo/mv5bntc4odm2mtu2nf5bml5banbnxkftztgwntezntmynje-._v1_sy1000_cr0-0-647-1000_al_/137670471-1-esl-ES/MV5BNTc4ODM2MTU2NF5BMl5BanBnXkFtZTgwNTEzNTMyNjE-._V1_SY1000_CR0-0-647-1000_AL_.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9612),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6728),
                             Deleted = false,
                             LongDescription = "Un asesino enmascarado aterroriza a una pequeña ciudad en la noche de Halloween.",
                             Name = "Halloween",
                             ShortDescription = "Un clásico del cine slasher que te hará saltar de miedo.",
-                            Url = "https://cdn.kobo.com/book-images/f9ab8287-7c5d-4650-9c92-371260037e85/1200/1200/False/leyendas-de-terror.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9613),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6728),
                             Deleted = false,
                             LongDescription = "Un grupo de adolescentes es perseguido en sus sueños por un asesino de pesadilla.",
                             Name = "A Nightmare on Elm Street",
                             ShortDescription = "No podrás dormir tranquilo después de ver esta película.",
-                            Url = "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/mejores-posters-cine-terror-miedo/mv5bntc4odm2mtu2nf5bml5banbnxkftztgwntezntmynje-._v1_sy1000_cr0-0-647-1000_al_/137670471-1-esl-ES/MV5BNTc4ODM2MTU2NF5BMl5BanBnXkFtZTgwNTEzNTMyNjE-._V1_SY1000_CR0-0-647-1000_AL_.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9614),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6729),
                             Deleted = false,
                             LongDescription = "Una pareja de investigadores paranormales ayuda a una familia a enfrentarse a una presencia malévola en su casa.",
                             Name = "The Conjuring",
                             ShortDescription = "Una historia basada en hechos reales que te dejará sin aliento.",
-                            Url = "https://img2.rtve.es/imagenes/portada-tales-from-the-crypt/1625668471937.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9615),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6730),
                             Deleted = false,
                             LongDescription = "Un grupo de niños se enfrenta a un aterrador payaso que aterroriza su ciudad.",
                             Name = "It",
                             ShortDescription = "El regreso del payaso más aterrador del cine.",
-                            Url = "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/mejores-posters-cine-terror-miedo/mv5bntc4odm2mtu2nf5bml5banbnxkftztgwntezntmynje-._v1_sy1000_cr0-0-647-1000_al_/137670471-1-esl-ES/MV5BNTc4ODM2MTU2NF5BMl5BanBnXkFtZTgwNTEzNTMyNjE-._V1_SY1000_CR0-0-647-1000_AL_.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9616),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6731),
                             Deleted = false,
                             LongDescription = "Un joven negro visita la casa de la familia de su novia blanca y descubre un oscuro secreto.",
                             Name = "Get Out",
                             ShortDescription = "Un thriller psicológico que te mantendrá en vilo hasta el final.",
-                            Url = "https://img2.rtve.es/imagenes/portada-tales-from-the-crypt/1625668471937.jpg"
+                            Url = "https://portadascreativas.com/wp-content/uploads/Matrix.jpg"
                         });
                 });
 
@@ -681,140 +684,140 @@ namespace BackEnd.Migrations
                         {
                             MovieId = 1,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9742),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6798),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 2,
                             ActorId = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9743),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6799),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 3,
                             ActorId = 4,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9743),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6799),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 4,
                             ActorId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9744),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6800),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 5,
                             ActorId = 7,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9745),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6801),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 6,
                             ActorId = 8,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9745),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6801),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 7,
                             ActorId = 9,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9746),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6802),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 8,
                             ActorId = 10,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9747),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6802),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 9,
                             ActorId = 11,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9747),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6803),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 10,
                             ActorId = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9748),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6804),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 11,
                             ActorId = 12,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9748),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6804),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 12,
                             ActorId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9749),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6805),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 13,
                             ActorId = 15,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9750),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6806),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 14,
                             ActorId = 14,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9750),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6806),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 15,
                             ActorId = 11,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9751),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6807),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 16,
                             ActorId = 8,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9752),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6807),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 17,
                             ActorId = 9,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9752),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6808),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 18,
                             ActorId = 13,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9753),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6809),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 19,
                             ActorId = 5,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9753),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6809),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 20,
                             ActorId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9754),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6810),
                             Deleted = false
                         });
                 });
@@ -847,140 +850,140 @@ namespace BackEnd.Migrations
                         {
                             MovieId = 1,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9710),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6771),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 2,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9711),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6772),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 3,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9711),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6773),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 4,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9712),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6773),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 5,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9713),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6774),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 6,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9713),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6775),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 7,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9714),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6775),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 8,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9715),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6778),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 9,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9716),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6778),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 10,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9717),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6779),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 11,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9717),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6780),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 12,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9718),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6780),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 13,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9718),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6781),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 14,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9719),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6781),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 15,
                             CategoryId = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9720),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6782),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 16,
                             CategoryId = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9722),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6783),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 17,
                             CategoryId = 3,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9723),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6783),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 18,
                             CategoryId = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9723),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6784),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 19,
                             CategoryId = 2,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9724),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6784),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 20,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9724),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6785),
                             Deleted = false
                         });
                 });
@@ -1013,140 +1016,140 @@ namespace BackEnd.Migrations
                         {
                             MovieId = 1,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9679),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6744),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 2,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9680),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6745),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 3,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9684),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6747),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 4,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9685),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6748),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 5,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9686),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6748),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 6,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9687),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6749),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 7,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9687),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6750),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 8,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9688),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6750),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 9,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9689),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6751),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 10,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9689),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6752),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 11,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9690),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6752),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 12,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9691),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6753),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 13,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9691),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6754),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 14,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9692),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6754),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 15,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9693),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6755),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 16,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9693),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6756),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 17,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9694),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6756),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 18,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9695),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6757),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 19,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9695),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6758),
                             Deleted = false
                         },
                         new
                         {
                             MovieId = 20,
                             GenreId = 6,
-                            CreatedAt = new DateTime(2023, 7, 17, 6, 1, 31, 979, DateTimeKind.Local).AddTicks(9696),
+                            CreatedAt = new DateTime(2023, 7, 17, 5, 43, 14, 672, DateTimeKind.Local).AddTicks(6758),
                             Deleted = false
                         });
                 });

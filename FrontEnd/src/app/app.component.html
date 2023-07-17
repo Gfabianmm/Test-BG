@@ -199,7 +199,7 @@
               </div>
             </div>
           </div>
-          <!-- Agregar más elementos .carousel-item según la cantidad de películas -->
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -215,8 +215,41 @@
 
 
 
+
+  <div *ngFor="let genre of genres">
+    <div class="card mt-5">
+      <div class="card-header">
+        <h5 class="card-title">{{ genre.description }}</h5>
+      </div>
+      <div class="card-body">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+          <div class="col" *ngFor="let movie of filterMoviesByGenre(genre.id); let i = index">
+
+              <div class="card card-movie">
+                <img [src]="movie.url" class="card-img-top img-fluid" alt="Imagen de la película" alt="Imagen de la película">
+                <div class="card-body">
+                  <h5 class="card-title">{{ movie.name }}</h5>
+                  <p class="card-text">{{ movie.longDescription }}</p>
+                  <div class="d-flex justify-content-between">
+                    <span class="badge bg-secondary" *ngFor="let genre of movie.movieGenres">{{ genre.description}}</span>
+                    <span class="badge bg-secondary" *ngFor="let category of movie.movieCategories">{{category.description }}</span>
+                  </div>
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
   <!--terror-->
-  <div class="card mt-5">
+  <!-- <div class="card mt-5">
     <div class="card-header">
       <h5 class="card-title">Terror</h5>
     </div>
@@ -372,7 +405,7 @@
               </div>
             </div>
           </div>
-          <!-- Agregar más elementos .carousel-item según la cantidad de películas -->
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -384,7 +417,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
