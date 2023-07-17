@@ -1,4 +1,5 @@
 ﻿using BackEnd.DataBase;
+using BackEnd.DataBase.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -11,8 +12,23 @@ public static class MigrationManager
         {
             using (var appContext = scope.ServiceProvider.GetRequiredService<TContext>())
             {
-                appContext.Database.EnsureCreated();
-                
+                //if (appContext.Database.CanConnect())
+                //{
+
+                appContext.Database.Migrate();
+                //if (appContext.Set<User>().Any())
+                //{
+
+                //}
+
+
+                //}
+                //else
+                //{
+                //    appContext.Database.EnsureCreated();
+                //}
+
+
             }
         }
 

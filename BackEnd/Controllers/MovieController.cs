@@ -1,4 +1,5 @@
 ﻿using BackEnd.Domain;
+using BackEnd.Domain.MovieProfile;
 using BackEnd.Domain.UserProfile;
 using BackEnd.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -8,24 +9,24 @@ namespace BackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class MovieController : ControllerBase
     {
-        private readonly ILogger<UserController> _logger;
-        private readonly IUserService _userService;
+        private readonly ILogger<MovieController> _logger;
+        private readonly IMovieService _movieService;
 
-        public UserController(ILogger<UserController> logger, IUserService userService)
+        public MovieController(ILogger<MovieController> logger, IMovieService userService)
         {
             _logger = logger;
-            _userService = userService;
+            _movieService = userService;
         }
 
 
         [HttpGet]
-        public async Task<ActionResult<QueryResultResource<UserResource>>> Get([FromQuery] UserQueryResource filter)
+        public async Task<ActionResult<QueryResultResource<MovieResource>>> Get([FromQuery] MovieQueryResource filter)
         {
             try
             {
-                return Ok(await _userService.Get(filter));
+                return Ok(await _movieService.Get(filter));
             }
             catch (Exception ex)
             {
@@ -36,11 +37,11 @@ namespace BackEnd.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserResource>> GetId(int id)
+        public async Task<ActionResult<MovieResource>> GetId(int id)
         {
             try
             {
-                return Ok(await _userService.GetId(id));
+                return Ok(await _movieService.GetId(id));
             }
             catch (Exception ex)
             {
@@ -50,24 +51,15 @@ namespace BackEnd.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] UserResourceSave value)
+        public async Task<ActionResult> Post([FromBody] MovieResourceSave value)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                try
-                {
-                    new MailAddress(value.Mail);
-                }
-                catch
-                {
-                    return BadRequest("El formato del email no es válido");
-                }
-
-
-                var _obj = await _userService.Post(value);
+                
+                var _obj = await _movieService.Post(value);
                 return CreatedAtAction(nameof(GetId), new { Id = _obj.Id }, null);
             }
             catch (Exception ex)
@@ -79,23 +71,15 @@ namespace BackEnd.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] UserResourceSave value)
+        public async Task<ActionResult> Put(int id, [FromBody] MovieResourceSave value)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                try
-                {
-                    new MailAddress(value.Mail);
-                }
-                catch
-                {
-                    return BadRequest("El formato del email no es válido");
-                }
-
-                var _result = await _userService.Put(id, value);
+             
+                var _result = await _movieService.Put(id, value);
 
                 return _result ? NoContent() : NotFound();
             }
@@ -112,7 +96,7 @@ namespace BackEnd.Controllers
         {
             try
             {
-                var _result = await _userService.Delete(id);
+                var _result = await _movieService.Delete(id);
                 return _result ? NoContent() : NotFound();
             }
             catch (Exception ex)

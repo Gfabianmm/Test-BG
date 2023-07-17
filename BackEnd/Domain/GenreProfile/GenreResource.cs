@@ -3,18 +3,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.Design;
 
-namespace BackEnd.DataBase.Entity
+namespace BackEnd.Domain.GenreProfile
 {
-    [Table("Genres")]
-    public class Genre
+
+    public class GenreResource
     {
-        [Key]
         public int Id { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? ModifiedAt { get; set; }
-        public bool Deleted { get; set; }
-        
-
     }
 }

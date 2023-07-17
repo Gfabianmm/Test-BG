@@ -1,6 +1,5 @@
 ﻿using BackEnd.DataBase;
 using BackEnd.DataBase.Entity;
-using BackEnd.Domain.UserProfile;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

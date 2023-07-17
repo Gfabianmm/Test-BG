@@ -12,7 +12,7 @@ namespace BackEnd.DataBase.Entity
         public string Names { get; set; }
         public string Password { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime ModifiedAt { get; set; }
+        public DateTime? ModifiedAt { get; set; }
         public bool Deleted { get; set; }
     }
 }

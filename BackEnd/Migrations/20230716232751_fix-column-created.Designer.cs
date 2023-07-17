@@ -4,6 +4,7 @@ using BackEnd.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEnd.Migrations
 {
     [DbContext(typeof(DBTestBGContext))]
-    partial class DBTestBGContextModelSnapshot : ModelSnapshot
+    [Migration("20230716232751_fix-column-created")]
+    partial class fixcolumncreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,7 +43,7 @@ namespace BackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -55,129 +58,145 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7501),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(294),
                             Deleted = false,
                             Description = "Actor famoso de Hollywood",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Brad Pitt"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7510),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(304),
                             Deleted = false,
                             Description = "Actor destacado en múltiples películas",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Leonardo DiCaprio"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7511),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(305),
                             Deleted = false,
                             Description = "Actriz talentosa y versátil",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Meryl Streep"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7512),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(305),
                             Deleted = false,
                             Description = "Actor icónico de la industria cinematográfica",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Tom Hanks"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7512),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(306),
                             Deleted = false,
                             Description = "Actriz conocida por su papel en películas de superhéroes",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Scarlett Johansson"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7513),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(307),
                             Deleted = false,
                             Description = "Actor reconocido por interpretar a Iron Man",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Robert Downey Jr."
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7514),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(308),
                             Deleted = false,
                             Description = "Actriz ganadora de premios y reconocida por Los juegos del hambre",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Jennifer Lawrence"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7514),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(308),
                             Deleted = false,
                             Description = "Actor destacado en películas dramáticas",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Denzel Washington"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7515),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(309),
                             Deleted = false,
                             Description = "Actriz talentosa y versátil",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Emma Stone"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7516),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(310),
                             Deleted = false,
                             Description = "Actor conocido por su interpretación de personajes excéntricos",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Johnny Depp"
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7516),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(311),
                             Deleted = false,
                             Description = "Actriz versátil y ganadora del premio de la Academia",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Anne Hathaway"
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7517),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(311),
                             Deleted = false,
                             Description = "Actor australiano conocido por interpretar a Thor",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Chris Hemsworth"
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7518),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(312),
                             Deleted = false,
                             Description = "Actriz versátil y ganadora del premio de la Academia",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Natalie Portman"
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7518),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(313),
                             Deleted = false,
                             Description = "Actor conocido por películas como El lado bueno de las cosas",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Bradley Cooper"
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7519),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(313),
                             Deleted = false,
                             Description = "Actriz y activista conocida por su papel en Tomb Raider",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Angelina Jolie"
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7520),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(314),
                             Deleted = false,
                             Description = "Actordestacado en películas de acción",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Keanu Reeves"
                         });
                 });
@@ -200,7 +219,7 @@ namespace BackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -211,37 +230,42 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7615),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(414),
                             Deleted = false,
-                            Description = "+18"
+                            Description = "+18",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7616),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(415),
                             Deleted = false,
-                            Description = "+21"
+                            Description = "+21",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7617),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(416),
                             Deleted = false,
-                            Description = "+12"
+                            Description = "+12",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7617),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(417),
                             Deleted = false,
-                            Description = "+9"
+                            Description = "+9",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7618),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(417),
                             Deleted = false,
-                            Description = "Todo público"
+                            Description = "Todo público",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -263,7 +287,7 @@ namespace BackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -274,142 +298,162 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7666),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(432),
                             Deleted = false,
-                            Description = "Acción"
+                            Description = "Acción",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7667),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(433),
                             Deleted = false,
-                            Description = "Aventura"
+                            Description = "Aventura",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7668),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(434),
                             Deleted = false,
-                            Description = "Comedia"
+                            Description = "Comedia",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7669),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(435),
                             Deleted = false,
-                            Description = "Drama"
+                            Description = "Drama",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7669),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(435),
                             Deleted = false,
-                            Description = "Suspenso"
+                            Description = "Suspenso",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7670),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(436),
                             Deleted = false,
-                            Description = "Terror"
+                            Description = "Terror",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7671),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(437),
                             Deleted = false,
-                            Description = "Ciencia ficción"
+                            Description = "Ciencia ficción",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7671),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(437),
                             Deleted = false,
-                            Description = "Animación"
+                            Description = "Animación",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7672),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(438),
                             Deleted = false,
-                            Description = "Romance"
+                            Description = "Romance",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7673),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(439),
                             Deleted = false,
-                            Description = "Documental"
+                            Description = "Documental",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7674),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(439),
                             Deleted = false,
-                            Description = "Fantasía"
+                            Description = "Fantasía",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7674),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(440),
                             Deleted = false,
-                            Description = "Histórico"
+                            Description = "Histórico",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7675),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(440),
                             Deleted = false,
-                            Description = "Misterio"
+                            Description = "Misterio",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7676),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(441),
                             Deleted = false,
-                            Description = "Western"
+                            Description = "Western",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7677),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(442),
                             Deleted = false,
-                            Description = "Musical"
+                            Description = "Musical",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7678),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(442),
                             Deleted = false,
-                            Description = "Deporte"
+                            Description = "Deporte",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7678),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(443),
                             Deleted = false,
-                            Description = "Guerra"
+                            Description = "Guerra",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7679),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(444),
                             Deleted = false,
-                            Description = "Crimen"
+                            Description = "Crimen",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7679),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(444),
                             Deleted = false,
-                            Description = "Aventura espacial"
+                            Description = "Aventura espacial",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7680),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(445),
                             Deleted = false,
-                            Description = "Superhéroes"
+                            Description = "Superhéroes",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -431,7 +475,7 @@ namespace BackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -454,9 +498,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7701),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(460),
                             Deleted = false,
                             LongDescription = "Un exasesino busca venganza después de que le roban lo más preciado que le quedaba: su perro.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "John Wick",
                             ShortDescription = "Un hombre en busca de justicia en un mundo de asesinos.",
                             Url = "https://example.com/john-wick.jpg"
@@ -464,9 +509,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7703),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(461),
                             Deleted = false,
                             LongDescription = "El agente Ethan Hunt se enfrenta a su misión más peligrosa hasta ahora cuando una operación sale mal y pone en peligro a millones de personas.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Mission: Impossible - Fallout",
                             ShortDescription = "La misión imposible más intensa y emocionante.",
                             Url = "https://example.com/mission-impossible-fallout.jpg"
@@ -474,9 +520,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7704),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(463),
                             Deleted = false,
                             LongDescription = "Los Vengadores y sus aliados se unen para luchar contra el poderoso Thanos y evitar que obtenga las gemas del infinito y destruya el universo.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Avengers: Infinity War",
                             ShortDescription = "La batalla definitiva por el destino del universo.",
                             Url = "https://example.com/avengers-infinity-war.jpg"
@@ -484,9 +531,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7705),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(501),
                             Deleted = false,
                             LongDescription = "Batman se enfrenta al Joker, un criminal psicótico que amenaza con sumir Gotham City en el caos y la anarquía.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Dark Knight",
                             ShortDescription = "El caballero oscuro contra el príncipe payaso del crimen.",
                             Url = "https://example.com/the-dark-knight.jpg"
@@ -494,9 +542,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7705),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(502),
                             Deleted = false,
                             LongDescription = "En un mundo postapocalíptico, Max Rockatansky y Furiosa se unen para",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Mad Max: Fury Road",
                             ShortDescription = "La película muestra una historia deslumbrante.",
                             Url = "https://example.com/mad-max-fury-road.jpg"
@@ -504,9 +553,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7707),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(503),
                             Deleted = false,
                             LongDescription = "Un policía de Nueva York se enfrenta a un grupo de terroristas en un rascacielos en Los Ángeles.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Die Hard",
                             ShortDescription = "El héroe que salvará la Navidad.",
                             Url = "https://example.com/die-hard.jpg"
@@ -514,9 +564,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7707),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(504),
                             Deleted = false,
                             LongDescription = "Un cyborg asesino del futuro es enviado al pasado para matar a una mujer cuyo hijo se convertirá en la única esperanza de la humanidad contra las máquinas.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Terminator",
                             ShortDescription = "El futuro está en juego.",
                             Url = "https://example.com/the-terminator.jpg"
@@ -524,9 +575,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7708),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(505),
                             Deleted = false,
                             LongDescription = "El arqueólogo y aventurero Indiana Jones se embarca en una peligrosa misión para encontrar el Arca de la Alianza antes que los nazis.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Indiana Jones: Raiders of the Lost Ark",
                             ShortDescription = "La aventura comienza.",
                             Url = "https://example.com/indiana-jones-raiders-of-the-lost-ark.jpg"
@@ -534,9 +586,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7709),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(506),
                             Deleted = false,
                             LongDescription = "Un parque temático lleno de dinosaurios vivos se convierte en una pesadilla cuando las criaturas escapan y comienzan a causar estragos.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Jurassic Park",
                             ShortDescription = "La maravilla de la prehistoria en la actualidad.",
                             Url = "https://example.com/jurassic-park.jpg"
@@ -544,9 +597,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7710),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(506),
                             Deleted = false,
                             LongDescription = "Un hobbit llamado Frodo se embarca en una épica aventura para destruir un anillo mágico y salvar la Tierra Media de la oscuridad.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Lord of the Rings: The Fellowship of the Ring",
                             ShortDescription = "El comienzo de una gran guerra.",
                             Url = "https://example.com/the-lord-of-the-rings-the-fellowship-of-the-ring.jpg"
@@ -554,9 +608,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7711),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(508),
                             Deleted = false,
                             LongDescription = "El Capitán Jack Sparrow se embarca en una aventura para recuperar su barco robado y salvar a una gobernadora secuestrada de una maldición pirata.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Pirates of the Caribbean: The Curse of the Black Pearl",
                             ShortDescription = "La vida de un pirata nunca ha sido tan divertida.",
                             Url = "https://example.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl.jpg"
@@ -564,9 +619,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7711),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(508),
                             Deleted = false,
                             LongDescription = "Un grupo de amigos se embarca en una aventura en busca de un tesoro perdido para salvar sus hogares de ser demolidos.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Goonies",
                             ShortDescription = "La pandilla más divertida en busca de aventuras.",
                             Url = "https://example.com/the-goonies.jpg"
@@ -574,9 +630,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7712),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(509),
                             Deleted = false,
                             LongDescription = "Un aventurero y una arqueóloga luchan contra una antigua maldición y enfrentan criaturas sobrenaturales mientras intentan salvar al mundo.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Mummy",
                             ShortDescription = "La aventura más emocionante en Egipto.",
                             Url = "https://example.com/the-mummy.jpg"
@@ -584,9 +641,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7713),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(510),
                             Deleted = false,
                             LongDescription = "Una niña es poseída por una entidad demoníaca y un sacerdote lucha por salvar su alma.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Exorcist",
                             ShortDescription = "El clásico del terror que te hará temblar.",
                             Url = "https://example.com/the-exorcist.jpg"
@@ -594,9 +652,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7715),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(512),
                             Deleted = false,
                             LongDescription = "Un escritor y su familia se mudan a un hotel aislado donde ocurren sucesos aterradores.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Shining",
                             ShortDescription = "Una historia de terror psicológico que te mantendrá en vilo.",
                             Url = "https://example.com/the-shining.jpg"
@@ -604,9 +663,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7715),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(513),
                             Deleted = false,
                             LongDescription = "Un asesino enmascarado aterroriza a una pequeña ciudad en la noche de Halloween.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Halloween",
                             ShortDescription = "Un clásico del cine slasher que te hará saltar de miedo.",
                             Url = "https://example.com/halloween.jpg"
@@ -614,9 +674,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7716),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(514),
                             Deleted = false,
                             LongDescription = "Un grupo de adolescentes es perseguido en sus sueños por un asesino de pesadilla.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "A Nightmare on Elm Street",
                             ShortDescription = "No podrás dormir tranquilo después de ver esta película.",
                             Url = "https://example.com/nightmare-on-elm-street.jpg"
@@ -624,9 +685,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7717),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(514),
                             Deleted = false,
                             LongDescription = "Una pareja de investigadores paranormales ayuda a una familia a enfrentarse a una presencia malévola en su casa.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "The Conjuring",
                             ShortDescription = "Una historia basada en hechos reales que te dejará sin aliento.",
                             Url = "https://example.com/the-conjuring.jpg"
@@ -634,9 +696,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7718),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(515),
                             Deleted = false,
                             LongDescription = "Un grupo de niños se enfrenta a un aterrador payaso que aterroriza su ciudad.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "It",
                             ShortDescription = "El regreso del payaso más aterrador del cine.",
                             Url = "https://example.com/it.jpg"
@@ -644,9 +707,10 @@ namespace BackEnd.Migrations
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7718),
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(516),
                             Deleted = false,
                             LongDescription = "Un joven negro visita la casa de la familia de su novia blanca y descubre un oscuro secreto.",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Get Out",
                             ShortDescription = "Un thriller psicológico que te mantendrá en vilo hasta el final.",
                             Url = "https://example.com/get-out.jpg"
@@ -667,7 +731,7 @@ namespace BackEnd.Migrations
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("MovieId", "ActorId");
@@ -681,92 +745,105 @@ namespace BackEnd.Migrations
                         {
                             MovieId = 1,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7806),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(571),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 2,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7807),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(572),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 3,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7808),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(572),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 4,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7809),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(573),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 5,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7809),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(574),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 6,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7810),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(574),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 7,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7811),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(575),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 8,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7811),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(576),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 9,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7812),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(576),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 10,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7813),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(577),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 11,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7813),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(577),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 12,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7814),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(578),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 13,
                             ActorId = 16,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7815),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(578),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -784,7 +861,7 @@ namespace BackEnd.Migrations
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("MovieId", "CategoryId");
@@ -798,92 +875,105 @@ namespace BackEnd.Migrations
                         {
                             MovieId = 1,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7755),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(551),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 2,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7756),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(552),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 3,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7757),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(553),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 4,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7758),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(553),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 5,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7758),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(554),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 6,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7759),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(555),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 7,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7759),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(555),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 8,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7760),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(556),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 9,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7761),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(557),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 10,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7761),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(557),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 11,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7762),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(558),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 12,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7762),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(558),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 13,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7763),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(559),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -901,7 +991,7 @@ namespace BackEnd.Migrations
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("MovieId", "GenreId");
@@ -915,92 +1005,105 @@ namespace BackEnd.Migrations
                         {
                             MovieId = 1,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7736),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(531),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 2,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7737),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(532),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 3,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7737),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(533),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 4,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7738),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(533),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 5,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7739),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(534),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 6,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7739),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(535),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 7,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7740),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(535),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 8,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7740),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(536),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 9,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7741),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(537),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 10,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7742),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(537),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 11,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7742),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(538),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 12,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7743),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(539),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MovieId = 13,
                             GenreId = 1,
-                            CreatedAt = new DateTime(2023, 7, 16, 21, 45, 55, 850, DateTimeKind.Local).AddTicks(7743),
-                            Deleted = false
+                            CreatedAt = new DateTime(2023, 7, 16, 18, 27, 51, 361, DateTimeKind.Local).AddTicks(539),
+                            Deleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -1022,7 +1125,7 @@ namespace BackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Names")

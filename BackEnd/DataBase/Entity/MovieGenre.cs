@@ -10,7 +10,7 @@ namespace BackEnd.DataBase.Entity
         public int GenreId { get; set; }
         public int MovieId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime ModifiedAt { get; set; }
+        public DateTime? ModifiedAt { get; set; }
         public bool Deleted { get; set; }
 
         [ForeignKey("GenreId")]
