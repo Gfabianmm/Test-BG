@@ -36,6 +36,8 @@ namespace BackEnd.Services
         public async Task<QueryResultResource<UserResource>> Get(UserQueryResource filter)
         {
             var query = _mapper.Map<UserQuery>(filter);
+            if (!string.IsNullOrEmpty(query.Password))
+                query.Password = HashKey(query.Password);
             var resultado = await _userDA.GetAll(query);
             return _mapper.Map<QueryResultResource<UserResource>>(resultado);
 

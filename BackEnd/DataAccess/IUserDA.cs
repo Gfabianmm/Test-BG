@@ -35,10 +35,10 @@ namespace BackEnd.DataAccess
                 query = query.Where(v => v.Names == queryObj.Names);
 
             if (!string.IsNullOrEmpty(queryObj.Password))
-                query = query.Where(v => v.Names == queryObj.Password);
+                query = query.Where(v => v.Password == queryObj.Password);
 
             if (!string.IsNullOrEmpty(queryObj.Mail))
-                query = query.Where(v => v.Names == queryObj.Mail);
+                query = query.Where(v => v.Mail == queryObj.Mail);
 
 
             var columnsMap = new Dictionary<string, Expression<Func<User, object>>>

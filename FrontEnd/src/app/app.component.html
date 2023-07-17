@@ -18,7 +18,7 @@
       </li> -->
     </ul>
     <span *ngIf="authService.isLoggedIn()" class="navbar-text ms-auto">
-      ¡Hola, {{ authService.getUser()?.name }}!
+      ¡Hola, {{ authService.getUser()?.names }}!
     </span>
     <span *ngIf="authService.isLoggedIn()" (click)="onLogout()" class="btn btn-link">Cerrar sesión</span>
     <button *ngIf="!authService.isLoggedIn()" class="btn btn-link ms-auto" (click)="openModal(ModalIniciarSesion)">
@@ -214,15 +214,13 @@
   </div>
 
 
-
-
   <div *ngFor="let genre of genres">
     <div class="card mt-5">
       <div class="card-header">
         <h5 class="card-title">{{ genre.description }}</h5>
       </div>
       <div class="card-body">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 ">
           <div class="col" *ngFor="let movie of filterMoviesByGenre(genre.id); let i = index">
 
               <div class="card card-movie">
@@ -236,13 +234,9 @@
                   </div>
                 </div>
               </div>
-
-
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
 

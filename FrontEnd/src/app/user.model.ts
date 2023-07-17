@@ -1,6 +1,6 @@
 export interface User{
    id : number;
-   name :string;
+   names :string;
    mail:string;
    interests: string[]
 }
